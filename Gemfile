@@ -30,6 +30,7 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 group :development do
   gem 'nifty-generators'
+  gem 'mongrel', '1.2.0.pre2'
 end
 
 group :test do
