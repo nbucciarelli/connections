@@ -9,6 +9,8 @@ gem 'sqlite3'
 # gem 'mysql2'
 
 gem 'devise'
+gem 'omniauth'
+gem 'heroku'
 
 # Asset template engines
 gem 'haml'
@@ -26,8 +28,12 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+group :development do
+  gem 'nifty-generators'
+end
 
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem "mocha"
 end
