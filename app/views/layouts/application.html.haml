@@ -1,0 +1,23 @@
+!!!
+%html{ :xmlns => 'http://www.w3.org/1999/xhtml', :lang => 'en', 'xml:lang' => 'en' }
+  %head
+    %title Connections
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    #user
+      - if user_signed_in?
+        Signed in as
+        = current_user.email
+        = ". Not you?"
+        = link_to "Sign out", destroy_user_session
+      - else
+        = link_to "Sign up", new_user_registration
+        or
+        = link_to "Sign in", new_user_session
+    .notice= notice
+    .alert= alert
+    = yield
+
+
