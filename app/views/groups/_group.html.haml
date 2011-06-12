@@ -1,0 +1,5 @@
+%li.group
+  = group.name
+  = link_to 'Edit', edit_group_path(group)
+  |
+  = link_to 'Delete', group_path(group), :method => :delete, :confirm => 'Are you sure?'

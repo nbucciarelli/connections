@@ -2,11 +2,7 @@
   = link_to 'Add group', new_group_path
   %ul.groups
     - @groups.each do |group|
-      %li.group
-        = group.name
-        = link_to 'Edit', edit_group_path(group)
-        |
-        = link_to 'Delete', group_path(group), :method => :delete, :confirm => 'Are you sure?'
+      = render @groups
 
 - else
   You have no groups.

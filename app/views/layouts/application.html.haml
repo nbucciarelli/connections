@@ -2,9 +2,8 @@
 %html
   %head
     %title Connections
-    = stylesheet_link_tag "application"
-    = stylesheet_link_tag "960"
-    = stylesheet_link_tag "layout"
+    - %w{ application 960 layout }.each do |stylesheet|
+      = stylesheet_link_tag stylesheet
     = javascript_include_tag "application"
     = csrf_meta_tags
     %meta{ :name => 'description', :content => ""  }
@@ -32,7 +31,7 @@
         #main.grid_11
           = yield
         #sidebar.grid_4
-          = render 'shared/sidebar'
+          = render 'sidebar'
         .clear
       .clear
       #footer.grid_16

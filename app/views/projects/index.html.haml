@@ -1,0 +1,8 @@
+- unless @projects.empty?
+  = link_to 'Add project', new_project_path
+  %ul.projects
+    = render @projects
+
+- else
+  You have no projects.
+  = link_to 'Add one now', new_project_path

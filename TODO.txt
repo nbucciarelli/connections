@@ -43,7 +43,7 @@ Projects
     - belongs_to group
     - has_many users
   Data Members:
-    -
+    - name
 
 Users
   Relationships:
