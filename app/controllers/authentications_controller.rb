@@ -5,7 +5,6 @@ class AuthenticationsController < ApplicationController
 
   def create
     # render :text => request.env["omniauth.auth"].to_yaml
-    puts request.env["omniauth.auth"].inspect
     omniauth = request.env["omniauth.auth"]
     authentication = Authentication.find_or_create_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
     if authentication
