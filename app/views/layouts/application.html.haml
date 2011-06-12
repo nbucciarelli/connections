@@ -1,22 +1,45 @@
 !!!
-%html{ :xmlns => 'http://www.w3.org/1999/xhtml', :lang => 'en', 'xml:lang' => 'en' }
+%html
   %head
     %title Connections
     = stylesheet_link_tag "application"
+    = stylesheet_link_tag "960"
+    = stylesheet_link_tag "layout"
     = javascript_include_tag "application"
     = csrf_meta_tags
+    %meta{ :name => 'description', :content => ""  }
+    %meta{ :name => 'keywords', :content => ""  }
   %body
-    #user
-      - if user_signed_in?
-        Signed in as
-        = "#{current_user.email}. Not you?"
-        = link_to "Sign out", destroy_user_session_path
-      - else
-        = link_to "Sign up", new_user_registration_path
-        or
-        = link_to "Sign in", new_user_session_path
-    .notice= notice
-    .alert= alert
-    = yield
+    .container_16
+      #header.grid_11
+        %h1
+          Header
+      #user.grid_5
+        - if user_signed_in?
+          Signed in as
+          = "#{current_user.email}. Not you?"
+          = link_to "Sign out", destroy_user_session_path
+        - else
+          = link_to "Sign up", new_user_registration_path
+          or
+          = link_to "Sign in", new_user_session_path
+      .clear
+      #flash.grid_16
+        .notice= notice
+        .alert= alert
+      .clear
+      #content.grid_16
+        #main.grid_11
+          Main
+          = yield
+
+        #sidebar.grid_4
+          Sidebar
+        .clear
+      .clear
+      #footer.grid_16
+        Footer
+      .clear
+    .clear
 
 

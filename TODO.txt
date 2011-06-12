@@ -22,6 +22,11 @@ Group
     - has_and_belongs_to_many users
     - has_many group_applications
 
+Group Invites
+  Relationships:
+    - belongs_to group
+    - has_one user
+
 Group Applications
   Relationships:
     - belongs_to group
@@ -35,8 +40,12 @@ Projects
 Users
   Relationships:
     - has_and_belongs_to_many projects
+    - has_and_belongs_to_many groups
   Data Members:
-    -
+    - first_name
+    - last_name
+    - email
+    - password
 
 Messages
 
