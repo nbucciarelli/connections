@@ -1,0 +1,42 @@
+What the site needs
+
+ - Dashboard
+  > Current Projects
+  > Group members (child or parent?)
+  > News feed of some sort
+ - Registration
+  > Personal Information
+  > Intended Role
+  > Samples of Work
+  > Resume
+ - Message Area
+  > Messages Between group members
+ - Events
+  > Events and calendar and such (more significant for bands but programming groups could make use as well)
+
+
+Group
+  Relationships:
+    - has_many projects
+    - has_many admins
+    - has_and_belongs_to_many users
+    - has_many group_applications
+
+Group Applications
+  Relationships:
+    - belongs_to group
+    - belongs_to user
+
+Projects
+  Relationships:
+    - belongs_to group
+    - has_many users
+
+Users
+  Relationships:
+    - has_and_belongs_to_many projects
+  Data Members:
+    -
+
+Messages
+
