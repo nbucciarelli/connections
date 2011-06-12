@@ -14,28 +14,36 @@ What the site needs
  - Events
   > Events and calendar and such (more significant for bands but programming groups could make use as well)
 
-
 Group
   Relationships:
     - has_many projects
     - has_many admins
     - has_and_belongs_to_many users
     - has_many group_applications
+  Data Members:
+    - name
+    - description
 
 Group Invites
   Relationships:
     - belongs_to group
     - has_one user
+  Data Members:
+    -
 
 Group Applications
   Relationships:
     - belongs_to group
     - belongs_to user
+  Data Members:
+    -
 
 Projects
   Relationships:
     - belongs_to group
     - has_many users
+  Data Members:
+    -
 
 Users
   Relationships:
@@ -48,4 +56,7 @@ Users
     - password
 
 Messages
-
+  Relationships:
+    -
+  Data Members:
+    -

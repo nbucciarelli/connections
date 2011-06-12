@@ -1,6 +1,6 @@
 Connections::Application.routes.draw do
   match 'auth/:provider/callback' => 'authentications#create'
-  resources :authentications
+  resources :authentications, :groups
 
   devise_for :users, :controllers => { :registrations => 'registrations' }
 

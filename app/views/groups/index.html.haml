@@ -1,0 +1,13 @@
+- unless @groups.empty?
+  = link_to 'Add group', new_group_path
+  %ul.groups
+    - @groups.each do |group|
+      %li.group
+        = group.name
+        = link_to 'Edit', edit_group_path(group)
+        |
+        = link_to 'Delete', group_path(group), :method => :delete, :confirm => 'Are you sure?'
+
+- else
+  You have no groups.
+  = link_to 'Add one now', new_group_path

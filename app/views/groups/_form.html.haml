@@ -1,0 +1,10 @@
+= form_for @group do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.submit
+    or
+    %a.cancel_link{:Href => groups_path} Cancel

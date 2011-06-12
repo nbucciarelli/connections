@@ -30,11 +30,9 @@
       .clear
       #content.grid_16
         #main.grid_11
-          Main
           = yield
-
         #sidebar.grid_4
-          Sidebar
+          = render 'shared/sidebar'
         .clear
       .clear
       #footer.grid_16

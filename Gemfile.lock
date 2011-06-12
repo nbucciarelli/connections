@@ -46,6 +46,7 @@ GEM
       bcrypt-ruby (~> 2.1.2)
       orm_adapter (~> 0.0.3)
       warden (~> 1.0.3)
+    dynamic_form (1.1.4)
     erubis (2.7.0)
     execjs (1.1.2)
       multi_json (~> 1.0)
@@ -184,6 +185,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-script
   devise
+  dynamic_form
   haml
   heroku
   jquery-rails
